@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+			width: 100% 
+		}
+
+		#wrapper {
+			width: 100%;
+			height: auto;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			min-height: 2000px;
+		}
+		header {
+			width: 100%;
+			height: 80px;
+			color: #eee;
+			line-height: 80px;
+			background: #446CB6;
+			position: fixed;
+			top: 0;
+		}
+		.container {
+			width: 100%;
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+
+		#logo {
+			font-family: San-sarif;
+			font-size: 50px;
+			float: left;
+		}
+
+		nav {
+			float: right;
+		}
+
+		nav > a {
+			text-decoration: none;
+			font-size: 20px;
+			margin: 0 15px;
+			color: #fff;
+			font-family: calibri;
+			font-style: bold;
+		}
+
+		nav > a:hover {
+			color: #FBCE2A;
+		}
+
+		header.sticky{
+			background: rgb(211,84,0,0.8);
+			height: 50px;
+			line-height: 50px;
+		}
+
+		header.sticky #logo {
+			font-size: 35px;
+		}
+		header.sticky #logo a {
+			font-size: 10px;
+		}
+
+		header {
+			transition: all 1s ease;
+		}
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="container">
+				<div id="logo">Online Store</div>
+				<nav>
+					<a href="#">Home</a>
+					<a href="#">Blog</a>
+					<a href="#">Courses</a>
+					<a href="#">Jobs</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
+		</header>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript">
+	
+		$(document).on('scroll', function(){
+	
+			if ($(this).scrollTop() > 1 ) {		
+	
+				$('header').addClass('sticky');
+	
+			}else{
+	
+				$('header').removeClass('sticky');
+	
+			}
+
+		});
+	</script>
+</body>
+</html>
